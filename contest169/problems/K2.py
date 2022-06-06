@@ -1,0 +1,1 @@
+exec("""from django.db.models import Model, QuerySet\ndef get_problems(Problem: Model) -> QuerySet:\n    ids = []\n    for x in Problem.objects.all():\n        last = int(str(x.id)[-1])\n        if last in [2, 3, 5, 7]:\n            ids.append(x.id)\n    return Problem.objects.filter(id__in=ids)""")

@@ -1,0 +1,1 @@
+print(float('{:.1f}'.format((int(input())+int(input()))/2)))
